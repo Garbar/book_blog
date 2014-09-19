@@ -23,18 +23,35 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
-# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
+# My gems
+gem 'nokogiri'
+gem 'httparty'
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'
+gem 'kaminari'
+gem 'kaminari-bootstrap', '~> 3.0.1'
+gem 'carrierwave'
+gem 'carrierwave-dropbox'
+gem "mini_magick"
+gem 'rmagick', :require => 'RMagick'
+gem 'devise'
+gem 'formtastic', '~> 3.0'
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
+gem 'friendly_id', '~> 5.0.3'
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
+group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
+  gem 'meta_request'
+end
+group :development, :test do
+  gem "rspec-rails"
+  gem 'spring'
+  gem "factory_girl_rails", "~> 4.0"
+  gem 'guard-rspec', require: false
+  gem 'cucumber-rails', :require => false
+  gem 'quiet_assets'
+  gem 'guard-cucumber'
+end
 
